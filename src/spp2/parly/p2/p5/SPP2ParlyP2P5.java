@@ -1,22 +1,27 @@
-/*Erick Gervacci, Norma Ledezma, Cecilia Gutiérrez, Benito Morante, Diego Santana.
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package p05pp2.spp2;
-import java.util.*;
-/**
- *
- * @author diego
+package spp2.parly.p2.p5;
+import java.util.Scanner;
+
+/** 
+ *Parly
+ *CECILIA GUTIÉRREZ DE LARA HERNÁNDEZ
+ *NORMA LEDEZMA MARTÍNEZ
+ *ERICK EDUARDO GERVACCI ROMERO
+ *DIEGO SANTANA LEIVA
+ *BENITO RAFAEL MORANTE VÁZQUEZ
  */
-public class P05PP2SPP2 {
+public class SPP2ParlyP2P5 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int tamaño=pedirEntero("tamaño del arreglo");
+        int tamaño=pedirEntero("el tamaño del arreglo");
         int [][] a=Matriz("A",tamaño);
         suma(a);   
     }
@@ -26,7 +31,7 @@ public class P05PP2SPP2 {
         int a=0;
         do{
             try{
-                System.out.println("Escriba el tamaño del arreglo");
+                System.out.println("Escriba "+ mensaje);
                 a=sc.nextInt();
                 flag=false;
             }
@@ -44,7 +49,7 @@ public class P05PP2SPP2 {
         System.out.println("Tamaño de la Matriz" +Matriz.length);
         for(int i=0; i<Matriz.length; i++){
             for(int j=0; j<Matriz.length; j++){
-                Matriz[i][j]=pedirEntero("Valores ["+i+","+j+"]:");
+                Matriz[i][j]=pedirEntero("los valores ["+i+","+j+"]:");
             }
         }
         return Matriz;
@@ -59,10 +64,10 @@ public class P05PP2SPP2 {
                 suma=suma+a[i][j];
                 
         }
-            System.out.println("La suma es  de la fila ["+(i+1)+"] es: "+suma );
+            System.out.println("La suma de la fila ["+(i+1)+"] es: "+suma );
         }
         System.out.println("");  
         return r;
+    }
+    
 }
-}
-
